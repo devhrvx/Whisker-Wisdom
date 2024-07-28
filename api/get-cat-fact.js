@@ -18,8 +18,8 @@ export default async function handler(req, res) {
             body: JSON.stringify({
                 model: "gpt-3.5-turbo",
                 messages: [
-                    { role: "system", content: "You are an expert in cat facts." },
-                    { role: "user", content: "Tell me a cat fact." }
+                    { role: "system", content: "You are an expert in short but fun cat facts." },
+                    { role: "user", content: "Tell me a short and fun cat fact." }
                 ],
                 max_tokens: 50
             })
