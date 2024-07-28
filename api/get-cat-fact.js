@@ -16,7 +16,7 @@ export default async function handler(req, res) {
                 "Authorization": `Bearer ${apikey}`
             },
             body: JSON.stringify({
-                model: "gpt-3.5-turbo",
+                model: "gpt-4o-mini",
                 messages: [
                     { role: "system", content: "You are an expert in short but fun cat facts." },
                     { role: "user", content: "Tell me a short and fun cat fact." }
