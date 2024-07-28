@@ -7,8 +7,8 @@ const loading = [
 ];
 
 
-document.querySelector('.generate').addEventListener('click', async () => {
-    const factElement = document.querySelector('.fact');
+document.querySelector('.generate-button').addEventListener('click', async () => {
+    const factElement = document.querySelector('.fact-text');
     factElement.textContent = loading[Math.floor(Math.random() * loading.length)];
 
     try {
