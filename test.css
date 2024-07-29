@@ -1,3 +1,14 @@
 body {
     background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+}
+
+.cat-box {
+    border: 1px black solid;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    bottom: 3px;
+    left: 160px;
 }
