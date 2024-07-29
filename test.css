@@ -12,6 +12,7 @@ body {
     bottom: 3px;
     left: 160px;
 }
+
 .main-box {
     height: 350px;
     width: 600px;
@@ -23,11 +24,13 @@ body {
     align-items: center;
     right: 130px;
 }
+
 .main-box .text-box {
     border: 1px solid green;
     height: 160px;
     width: 500px;  
 }
+
 .main-box .button-box{
     border: 1px solid blue;
     height: 60px;
