@@ -1,28 +1,50 @@
-h1 {
-    text-align: center;
-     font-family: Arial, Helvetica, sans-serif;
+body {
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-    width: 100%;
+.cat-box {
+    border: 1px black solid;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    bottom: 3px;
+    left: 160px;
+}
+
+.main-box {
+    height: 350px;
+    width: 600px;
+    border: 1px solid;
+    position:absolute;
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    right: 130px;
 }
 
-.generate {
-    width: fit-content;
-    padding: 6px 18px;
-    font-size: 100%;
+.main-box .text-box {
+    border: 1px solid green;
+    height: 160px;
+    width: 500px;  
 }
 
-.fact {
+.main-box .text-box .fact-text {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 100%;
     text-align: center;
     font-weight: 400;
+}
+
+.main-box .button-box{
+    border: 1px solid blue;
+    height: 60px;
+    width: 300px;
+}
+.main-box .button-box .generate-button {
+    width: fit-content;
+    padding: 6px 18px;
+    font-size: 100%;
 }
