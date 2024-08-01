@@ -1,28 +1,68 @@
-h1 {
-    text-align: center;
-     font-family: Arial, Helvetica, sans-serif;
-}
-
-.container {
-    width: 100%;
+body {
+    background-color: #c0c0c0;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-    justify-content: center;
-    align-items: center;
 }
 
-.generate {
+.cat-box {
+    background-image: url('nerdy.png');
+    background-size: contain;
+    background-color: violet;
+    background-position: center;
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    bottom: 3px;
+    left: 240px;
+}
+
+.main-box {
+    height: 350px;
+    width: fit-content;
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    right: 130px;
+}
+
+.main-box .text-box {
+    height: 160px;
+    width: fit-content;
+}
+
+.main-box .text-box .fact-text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 100%;
+    text-align: center;
+    font-weight: 400;
+}
+
+.main-box .button-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 300px;
+}
+.main-box .button-box .generate-button {
     width: fit-content;
     padding: 6px 18px;
     font-size: 100%;
 }
 
-.fact {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 100%;
-    text-align: center;
-    font-weight: 400;
+.main-box .text-box .fact-text.generated {
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    animation: typing 2s steps(50, end);
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
 }
