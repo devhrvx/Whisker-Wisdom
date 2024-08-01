@@ -2,31 +2,47 @@ body {
     background-color: #c0c0c0;
     margin: 0;
     padding: 0;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .cat-box {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
     background-image: url('nerdy.png');
     background-size: contain;
     background-color: violet;
     background-position: center;
     height: 500px;
     width: 500px;
-    position: absolute;
-    bottom: 3px;
-    left: 240px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cat-box .button-box {
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 15px;
+}
+
+.cat-box .button-box .generate-button {
+    padding: 8px 16px;
+    font-size: 20px;
 }
 
 .main-box {
-    height: 350px;
+    height: fit-content;
     width: fit-content;
-    position:absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    right: 130px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main-box .text-box {
@@ -41,25 +57,12 @@ body {
     font-weight: 400;
 }
 
-.main-box .button-box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60px;
-    width: 300px;
-}
-.main-box .button-box .generate-button {
-    width: fit-content;
-    padding: 6px 18px;
-    font-size: 100%;
-}
-
 .main-box .text-box .fact-text.generated {
     height: 100%;
     overflow: hidden;
     white-space: nowrap;
     width: 100%;
-    animation: typing 2s steps(50, end);
+    animation: typing 1.6s steps(50, end);
 }
 
 @keyframes typing {
