@@ -14,9 +14,15 @@ document.querySelector('.generate-button').addEventListener('click', async () =>
     try {
         const response = await fetch("/api/get-cat-fact");
         const data = await response.json();
+        factElement.classList.remove('generated');
+        void factElement.offsetWidth;
         factElement.textContent = data.fact;
+        factElement.classList.add('generated');
     } catch (error) {
+        factElement.classList.remove('generated');
+        void factElement.offsetWidth;
         factElement.textContent = "Failed to fetch a cat fact. :(";
+        factElement.classList.add('generated');
         console.error(error);
     }
 });

@@ -11,7 +11,6 @@ body {
     background-size: contain;
     background-color: violet;
     background-position: center;
-    border: 1px white solid;
     height: 500px;
     width: 500px;
     position: absolute;
@@ -21,8 +20,7 @@ body {
 
 .main-box {
     height: 350px;
-    width: 600px;
-    border: 1px solid;
+    width: fit-content;
     position:absolute;
     display: flex;
     flex-direction: column;
@@ -32,9 +30,8 @@ body {
 }
 
 .main-box .text-box {
-    border: 1px solid green;
     height: 160px;
-    width: 500px;  
+    width: fit-content;
 }
 
 .main-box .text-box .fact-text {
@@ -45,7 +42,9 @@ body {
 }
 
 .main-box .button-box{
-    border: 1px solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 60px;
     width: 300px;
 }
@@ -53,4 +52,17 @@ body {
     width: fit-content;
     padding: 6px 18px;
     font-size: 100%;
+}
+
+.main-box .text-box .fact-text.generated {
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    animation: typing 2s steps(50, end);
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
 }
