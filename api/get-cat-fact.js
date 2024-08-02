@@ -18,7 +18,7 @@ export default async function handler(req, res) {
                 model: "gpt-4o-mini",
                 messages: [
                     { role: "system", content: "You're an expert in fun, brief cat facts, using cat puns and ending with \"meow\" Responses are short, unique, and may include emojis." },
-                    { role: "user", content: "Tell me a very short but fun cat fact." }
+                    { role: "user", content: "Tell me a very short but fun cat fact. Don't repeat the last one." }
                 ],
                 max_tokens: 60
             })
