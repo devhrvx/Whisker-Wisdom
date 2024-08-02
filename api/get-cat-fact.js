@@ -23,8 +23,6 @@ export default async function handler(req, res) {
                 max_tokens: 60
             })
         });
-        let maxSimilarity = 1;
-        let attempts = 0;
 
         if (!response.ok) {
             console.error("Failed to fetch from OpenAI API:", response.statusText);
