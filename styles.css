@@ -1,8 +1,9 @@
-body {
-    background-color: #c0c0c0;
+body, html {
+    width: 100%;
+    background-color: #f8fc87;
     margin: 0;
     padding: 0;
-    padding-top: 20px;
+    padding-top: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,10 +18,16 @@ body {
     background-size: contain;
     background-color: violet;
     background-position: center;
-    height: 500px;
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+    height: 450px;
+    width: 450px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cat-box.yapping {
+    background-image: url('pop_yap.gif');
 }
 
 .cat-box .button-box {
@@ -32,11 +39,13 @@ body {
 .cat-box .button-box .generate-button {
     padding: 8px 16px;
     font-size: 20px;
+    font-family: 'Sawarabi Gothic', sans-serif;
 }
 
 .main-box {
+    margin-top: 10px;
     height: fit-content;
-    width: fit-content;
+    width: 75%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -46,26 +55,49 @@ body {
 }
 
 .main-box .text-box {
-    height: 160px;
-    width: fit-content;
+    overflow: hidden;
+    height: fit-content;
+    width: 75%;
 }
 
 .main-box .text-box .fact-text {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 100%;
+    overflow: hidden;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 130%;
     text-align: center;
-    font-weight: 400;
+    font-weight: 600;
+    overflow-wrap: break-word;
 }
 
 .main-box .text-box .fact-text.generated {
-    height: 100%;
     overflow: hidden;
-    white-space: nowrap;
     width: 100%;
-    animation: typing 1.6s steps(50, end);
+    animation: appearing 1.6s ease;
+    white-space: normal;
 }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+
+@keyframes appearing {
+    from { opacity: 0;
+    color: rgba(240, 240, 140, 0.764); }
+    to { opacity: 1;
+    color: black; }
+}
+
+@media (max-width: 800px) {
+    .cat-box {
+        width: 300px;
+        height: 300px;
+        bottom: 40px;
+    }
+    body, html {
+        padding-top: 30px;
+    }
+    .main-box {
+        margin-top: 0;
+        width: 90%;
+    }
+    .main-box .text-box .fact-text {
+        font-size: 110%;
+    }
 }
