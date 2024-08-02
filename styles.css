@@ -1,5 +1,4 @@
 body, html {
-    width: 100%;
     background-color: #f8fc87;
     margin: 0;
     padding: 0;
@@ -7,6 +6,25 @@ body, html {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-image: url('bg_el_gato.svg');
+    background-position: center;
+    background-size: contain;
+}
+
+.title {
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 250%;
+    font-weight: 700;
+    background-color: #b05de443;
+    padding: 8px 26px;
+    border-radius: 4px;
+    backdrop-filter: blur(2px);
 }
 
 .cat-box {
@@ -21,8 +39,8 @@ body, html {
     height: 450px;
     width: 450px;
     position: absolute;
-    bottom: 20px;
-    left: 50%;
+    bottom: 15%;
+    left: 81.7%;
     transform: translateX(-50%);
 }
 
@@ -52,7 +70,7 @@ body, html {
 }
 
 .cat-box .button-box .generate-button:hover {
-    transform: translateY(-4px);
+    transform: translateY(-4px) scale(1.1);
     background-color: #fff537;
     color: rgb(118, 38, 175);
     box-shadow: 0px 0px 7px 6px rgba(213,213,213,0.82);
@@ -66,14 +84,14 @@ body, html {
     background-repeat: no-repeat;
     background-position: right;
     height: 300px;
-    margin-top: 10px;
+    margin-top: 10%;
     width: 60%;
     display: flex;
-    padding-right: 85px;
+    padding-right: 95px;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin-left: auto;
+    margin-left: .3%;
     margin-right: auto;
 }
 
@@ -111,7 +129,9 @@ body, html {
     .cat-box {
         width: 300px;
         height: 300px;
-        bottom: 40px;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
     }
     body, html {
         padding-top: 10px;
@@ -125,8 +145,12 @@ body, html {
         background-position: right;
         padding-bottom: 16%;
         padding-right: 0;
+        margin-left: auto;
     }
     .main-box .text-box .fact-text {
         font-size: 110%;
+    }
+    .title {
+        font-size: 120%;
     }
 }
