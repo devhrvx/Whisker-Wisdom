@@ -97,7 +97,7 @@ body, html {
 }
 
 .main-box.generated {
-    animation: appearing 2s ease;
+    animation: appearing 1s ease;
 }
 
 .main-box .text-box {
@@ -118,7 +118,7 @@ body, html {
 .main-box .text-box .fact-text.generated {
     overflow: hidden;
     width: 100%;
-    animation: appearing 2s ease;
+    animation: appearing 1s ease;
     white-space: normal;
 }
 
