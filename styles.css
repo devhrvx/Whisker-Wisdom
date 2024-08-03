@@ -6,14 +6,14 @@ body, html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url('bg_el_gato.svg');
+    background-image: url('Bg_pttrn.svg');
     background-position: center;
     background-size: contain;
 }
 
 .title {
     display: flex;
-    width: fit-content;
+    width: 96%;
     justify-content: center;
     align-items: center;
     margin-left: auto;
@@ -24,7 +24,7 @@ body, html {
     background-color: #b05de443;
     padding: 8px 26px;
     border-radius: 4px;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(1px);
 }
 
 .cat-box {
@@ -42,6 +42,7 @@ body, html {
     bottom: 15%;
     left: 81.7%;
     transform: translateX(-50%);
+    border-radius: 30%;
 }
 
 .cat-box.yapping {
@@ -95,6 +96,10 @@ body, html {
     margin-right: auto;
 }
 
+.main-box.generated {
+    animation: appearing 2s ease;
+}
+
 .main-box .text-box {
     overflow: hidden;
     height: fit-content;
@@ -113,7 +118,7 @@ body, html {
 .main-box .text-box .fact-text.generated {
     overflow: hidden;
     width: 100%;
-    animation: appearing 1.6s ease;
+    animation: appearing 2s ease;
     white-space: normal;
 }
 
@@ -129,7 +134,7 @@ body, html {
     .cat-box {
         width: 300px;
         height: 300px;
-        bottom: 20px;
+        bottom: 10px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -152,5 +157,6 @@ body, html {
     }
     .title {
         font-size: 120%;
+        width: 80%;
     }
 }
