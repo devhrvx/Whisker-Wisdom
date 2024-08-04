@@ -52,7 +52,6 @@ body, html {
 .cat-box .button-box {
     width: fit-content;
     height: fit-content;
-    margin-bottom: 15px;
 }
 
 .cat-box .button-box .generate-button {
@@ -60,20 +59,21 @@ body, html {
     border: none;
     padding: 8px 29px;
     font-size: 16px;
-    font-weight: 700;
-    border-radius: 12px;
+    font-weight: 600;
+    letter-spacing: .8px;
+    border-radius: 4px;
     color: rgb(17, 16, 16);
     font-family: 'Sawarabi Gothic', sans-serif;
-    box-shadow: 0px 10px 11px 0px rgba(29, 29, 29, 0.511);
-    -webkit-box-shadow: 0px 10px 11px 0px rgba(29, 29, 29, 0.511);
-    -moz-box-shadow: 0px 10px 11px 0px rgba(29, 29, 29, 0.511);
+    box-shadow: 0px 10px 11px 0px rgba(29, 29, 29, 0.304);
+    -webkit-box-shadow: 0px 10px 11px 0px rgba(29, 29, 29, 0.304);
+    -moz-box-shadow: 0px 10px 11px 0px rgba(29, 29, 29, 0.304);
     transition: .5s ease;
 }
 
 .cat-box .button-box .generate-button:hover {
-    transform: translateY(-4px) scale(1.1);
+    transform: translateY(-4px) scale(1.05);
     background-color: #fff537;
-    color: rgb(118, 38, 175);
+    color: rgb(78, 17, 121);
     box-shadow: 0px 0px 7px 6px rgba(213,213,213,0.82);
     -webkit-box-shadow: 0px 0px 7px 6px rgba(213,213,213,0.82);
     -moz-box-shadow: 0px 0px 7px 6px rgba(213,213,213,0.82);
@@ -134,7 +134,7 @@ body, html {
     .cat-box {
         width: 300px;
         height: 300px;
-        bottom: 10px;
+        bottom: 30px;
         left: 50%;
         transform: translateX(-50%);
     }
