@@ -1,5 +1,4 @@
-// api/get-cat-fact.js
-
+let previousFacts = [];
 export default async function handler(req, res) {
     const apikey = process.env.OPENAI_API_KEY;
 
@@ -16,10 +15,10 @@ export default async function handler(req, res) {
                 "Authorization": `Bearer ${apikey}`
             },
             body: JSON.stringify({
-                model: "gpt-4o-mini",
+                model: "gpt-4o-mini-2024-07-18",
                 messages: [
                     { role: "system", content: "You're an expert in fun, brief cat facts, using cat puns and ending with \"meow\" Responses are short, unique, and may include emojis." },
-                    { role: "user", content: "Tell me a very short but fun cat fact." }
+                    { role: "user", content: "Tell me a very short but fun cat fact. Don't repeat the last one." }
                 ],
                 max_tokens: 60
             })

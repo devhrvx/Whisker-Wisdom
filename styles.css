@@ -1,68 +1,162 @@
-body {
-    background-color: #c0c0c0;
+body, html {
+    background-color: #f8fc87;
     margin: 0;
     padding: 0;
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    background-image: url('Bg_pttrn.svg');
+    background-position: center;
+    background-size: contain;
+}
+
+.title {
+    display: flex;
+    width: 96%;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 250%;
+    font-weight: 700;
+    background-color: #b05de443;
+    padding: 8px 26px;
+    border-radius: 4px;
+    backdrop-filter: blur(1px);
 }
 
 .cat-box {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
     background-image: url('nerdy.png');
     background-size: contain;
     background-color: violet;
     background-position: center;
-    height: 500px;
-    width: 500px;
+    height: 450px;
+    width: 450px;
     position: absolute;
-    bottom: 3px;
-    left: 240px;
+    bottom: 15%;
+    left: 81.7%;
+    transform: translateX(-50%);
+    border-radius: 30%;
+}
+
+.cat-box.yapping {
+    background-image: url('pop_yap.gif');
+}
+
+.cat-box .button-box {
+    width: fit-content;
+    height: fit-content;
+}
+
+.cat-box .button-box .generate-button {
+    background-color: #f7ec23;
+    border: none;
+    padding: 8px 29px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .8px;
+    border-radius: 4px;
+    color: rgb(17, 16, 16);
+    font-family: 'Sawarabi Gothic', sans-serif;
+    box-shadow: 0px 10px 11px 0px rgba(29, 29, 29, 0.304);
+    -webkit-box-shadow: 0px 10px 11px 0px rgba(29, 29, 29, 0.304);
+    -moz-box-shadow: 0px 10px 11px 0px rgba(29, 29, 29, 0.304);
+    transition: .5s ease;
+}
+
+.cat-box .button-box .generate-button:hover {
+    transform: translateY(-4px) scale(1.05);
+    background-color: #fff537;
+    color: rgb(78, 17, 121);
+    box-shadow: 0px 0px 7px 6px rgba(213,213,213,0.82);
+    -webkit-box-shadow: 0px 0px 7px 6px rgba(213,213,213,0.82);
+    -moz-box-shadow: 0px 0px 7px 6px rgba(213,213,213,0.82);
 }
 
 .main-box {
-    height: 350px;
-    width: fit-content;
-    position:absolute;
+    background-image: url('Rectangle 1.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 300px;
+    margin-top: 10%;
+    width: 60%;
     display: flex;
+    padding-right: 95px;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    right: 130px;
+    margin-left: .3%;
+    margin-right: auto;
+}
+
+.main-box.generated {
+    animation: appearing 1s ease;
 }
 
 .main-box .text-box {
-    height: 160px;
-    width: fit-content;
+    overflow: hidden;
+    height: fit-content;
+    width: 75%;
 }
 
 .main-box .text-box .fact-text {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 100%;
+    overflow: hidden;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 130%;
     text-align: center;
-    font-weight: 400;
-}
-
-.main-box .button-box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60px;
-    width: 300px;
-}
-.main-box .button-box .generate-button {
-    width: fit-content;
-    padding: 6px 18px;
-    font-size: 100%;
+    font-weight: 600;
+    overflow-wrap: break-word;
 }
 
 .main-box .text-box .fact-text.generated {
-    height: 100%;
     overflow: hidden;
-    white-space: nowrap;
     width: 100%;
-    animation: typing 2s steps(50, end);
+    animation: appearing 1s ease;
+    white-space: normal;
 }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+
+@keyframes appearing {
+    from { opacity: 0;
+    color: rgba(240, 240, 140, 0.764); }
+    to { opacity: 1;
+    color: black; }
+}
+
+@media (max-width: 800px) {
+    .cat-box {
+        width: 300px;
+        height: 300px;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    body, html {
+        padding-top: 10px;
+    }
+    .main-box {
+        margin-top: 0;
+        width: 90%;
+        background-image: url('Rectangle 3.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        padding-bottom: 16%;
+        padding-right: 0;
+        margin-left: auto;
+    }
+    .main-box .text-box .fact-text {
+        font-size: 110%;
+    }
+    .title {
+        font-size: 120%;
+        width: 80%;
+    }
 }

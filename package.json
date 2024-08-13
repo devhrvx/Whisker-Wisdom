@@ -11,6 +11,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "openai": "^4.53.2"
+    "openai": "^4.53.2",
+    "string-similarity": "^4.0.4"
   }
 }
